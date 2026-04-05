@@ -1,0 +1,6 @@
+{
+  "appId": "com.numberextractor.pro",
+  "appName": "Number Extractor Pro",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

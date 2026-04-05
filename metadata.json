@@ -1,0 +1,5 @@
+{
+  "name": "Number Extractor Pro",
+  "description": "Extract numbers with more than 6 digits from text files and images within a selected folder.",
+  "requestFramePermissions": []
+}

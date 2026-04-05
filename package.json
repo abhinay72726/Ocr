@@ -1,0 +1,68 @@
+{
+  "name": "react-example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist dist_electron",
+    "lint": "tsc --noEmit",
+    "pre-electron:dev": "npm run build",
+    "electron:dev": "electron .",
+    "pre-electron:build": "npm run build",
+    "electron:build": "electron-builder --win",
+    "pre-cap:add": "npm run build",
+    "cap:add": "cap add",
+    "pre-cap:copy": "npm run build",
+    "cap:copy": "cap copy",
+    "pre-cap:sync": "npm run build",
+    "cap:sync": "cap sync",
+    "pre-cap:open": "npm run build",
+    "cap:open": "cap open"
+  },
+  "build": {
+    "appId": "com.numberextractor.pro",
+    "productName": "Number Extractor Pro",
+    "directories": {
+      "output": "dist_electron"
+    },
+    "win": {
+      "target": "portable"
+    },
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "package.json"
+    ]
+  },
+  "dependencies": {
+    "@google/genai": "^1.29.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vite": "^6.2.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.3.0",
+    "@capacitor/cli": "^8.3.0",
+    "@capacitor/core": "^8.3.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "autoprefixer": "^10.4.21",
+    "electron": "^41.1.1",
+    "electron-builder": "^26.8.1",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
